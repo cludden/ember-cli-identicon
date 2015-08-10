@@ -1,5 +1,6 @@
 import Ember from 'ember';
-
+/* global jsSHA */
+/* global Identicon */
 
 /**
  * @classdesc Description
