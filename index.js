@@ -17,7 +17,12 @@ module.exports = {
         this.app.import('vendor/ember-cli-identicon/shim.js', {
             type: 'vendor',
             exports: {
-                'identicon.js': ['default'],
+                'identicon.js': ['default']
+            }
+        });
+        this.app.import('vendor/ember-cli-identicon/shim.js', {
+            type: 'vendor',
+            exports: {
                 'jsSHA': ['default']
             }
         });
