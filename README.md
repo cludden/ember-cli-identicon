@@ -12,15 +12,11 @@ in *app/pods/components/user-avatar/component.js*
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
+    // Inject a reference to the identicon service provided by this addon
     identicon: Ember.inject.service(),
 
-    /**
-     * Profile image src. If user does not have an associated image, generate
-     * an icon using the identicon.js service
-     *
-     * @type {string}
-     */
+    // Profile image src. If user does not have an associated image, generate
+    // an icon using the identicon.js service
     src: function() {
         // look for an image attribute on the user record and return it if found
         var image = this.get('user.image');
