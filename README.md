@@ -12,11 +12,7 @@ in *app/pods/components/user-avatar/component.js*
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    /**
-     * Inject a reference to the identicon service provided by this addon
-     *
-     * @type {object}
-     */
+
     identicon: Ember.inject.service(),
 
     /**
@@ -46,7 +42,7 @@ export default Ember.Component.extend({
             size: options.size || 48,
             bgColors: options.bgColors || [224,224,224]
         });
-    }.property('session.user', 'email', 'margin', 'size', 'bgColors')
+    }.property('user')
 });
 ```
 
