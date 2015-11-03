@@ -6,7 +6,6 @@ module.exports = {
     },
 
     afterInstall: function () {
-        this.addBowerPackageToProject('jsSHA#1.0');
-        this.addBowerPackageToProject('identicon#1.0');
+        return this.addBowerPackagesToProject([{name: 'jsSHA', version: '2.0.2'},{name: 'identicon'}]);
     }
 };

@@ -12,8 +12,8 @@ module.exports = {
     included: function (app) {
         this._super.included(app);
         this.app.import(app.bowerDirectory + '/jsSHA/src/sha.js');
-        this.app.import(app.bowerDirectory + '/identicon.js/pnglib.js');
-        this.app.import(app.bowerDirectory + '/identicon.js/identicon.js');
+        this.app.import(app.bowerDirectory + '/identicon/pnglib.js');
+        this.app.import(app.bowerDirectory + '/identicon/identicon.js');
         this.app.import('vendor/ember-cli-identicon/shim.js', {
             type: 'vendor',
             exports: {
