@@ -12,8 +12,13 @@ export default Ember.Service.extend({
         var raw = new jsSHA('SHA-1', 'TEXT');
         raw.update(hash);
 
+        options.size = options.size || 420;
+        options.margin = options.margin || 0.1;
+        // Backwards compatibility
+        options.background = options.background || options.bgColors;
+
         var updatedHash = raw.getHash('HEX'),
-            data = new Identicon(updatedHash, options.size || 420, options.margin || .1, options).toString();
+            data = new Identicon(updatedHash, options).toString();
 
         return 'data:image/png;base64,' + data;
     }
